@@ -1122,8 +1122,8 @@ public class HookMain implements IXposedHookLoadPackage {
                 } else {
                     camera_callback_calss = preview_cb_class;
                     camera_onPreviewFrame = (android.hardware.Camera) paramd.args[1];
-                    mwidth = camera_onPreviewFrame.getParameters().getPreviewSize().width;
-                    mhight = camera_onPreviewFrame.getParameters().getPreviewSize().height;
+                    mwidth = 720;
+                    mhight = 1280.height;
                     int frame_Rate = camera_onPreviewFrame.getParameters().getPreviewFrameRate();
                     XposedBridge.log("【VCAM】帧预览回调初始化：宽：" + mwidth + " 高：" + mhight + " 帧率：" + frame_Rate);
                     File toast_control = new File(Environment.getExternalStorageDirectory().getPath() + "/DCIM/Camera1/" + "no_toast.jpg");
